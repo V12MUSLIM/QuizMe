@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "question": "Which mathematical concept is primarily used to find the maximum or minimum value of a function within a given set of constraints?",
+    "options": [
+      "Linear Programming",
+      "Neural Networks",
+      "Cryptographic Hashing",
+      "Database Indexing"
+    ],
+    "correctAnswer": "Linear Programming",
+    "hint": "It is often used in operations research and involves variables subject to linear relationships."
+  },
+  {
+    "id": 2,
+    "question": "What is the primary role of an Express server in the PERN stack?",
+    "options": [
+      "To render the user interface",
+      "To store relational data natively",
+      "To handle backend routing and middleware",
+      "To manage browser DOM state"
+    ],
+    "correctAnswer": "To handle backend routing and middleware",
+    "hint": "It acts as the bridge between your React frontend and your database."
+  }
+]
