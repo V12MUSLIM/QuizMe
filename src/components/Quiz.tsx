@@ -30,21 +30,10 @@ export default function Quiz() {
   const currentQ = questions[currentIndex];
   const ProgressBarValue = ((currentIndex + 1) / questions.length) * 100;
 
-  const clayCard =
-    "bg-[#eef2f6] dark:bg-[#111111] rounded-[28px] sm:rounded-[40px] border border-white/60 dark:border-white/5 shadow-clay-card dark:shadow-clay-card-dark transition-all ease-in-out duration-300";
-
-  const clayElement =
-    "bg-[#eef2f6] dark:bg-[#111111] rounded-2xl border border-white/50 dark:border-white/5 shadow-clay-elem dark:shadow-clay-elem-dark transition-all ease-in-out duration-300";
-
-  const clayButtonAction =
-    "bg-violet-500 dark:bg-violet-500 rounded-2xl text-white shadow-clay-btn dark:shadow-clay-btn-dark hover:bg-violet-600 dark:hover:bg-violet-600";
-
   if (isFinished) {
     return (
       <div className="min-h-screen flex items-center justify-center px-3 sm:px-4 transition-colors duration-300">
-        <div
-          className={`w-full max-w-sm sm:max-w-md p-8 sm:p-10 text-center flex flex-col items-center ${clayCard}`}
-        >
+        <div className="w-full max-w-sm sm:max-w-md p-8 sm:p-10 text-center flex flex-col items-center clay-card">
           <CheckCircle className="w-16 h-16 sm:w-20 sm:h-20 text-green-500 mb-5 drop-shadow-md" />
           <h2 className="text-3xl sm:text-4xl font-black text-gray-800 dark:text-white mb-2">
             Exam Complete!
@@ -54,7 +43,7 @@ export default function Quiz() {
           </p>
           <Button
             onPress={restartQuiz}
-            className={`h-13 sm:h-14 w-full font-black tracking-wide active:scale-95 transition-[transform,box-shadow,background-color] duration-[250ms,250ms,200ms] ease-out ${clayButtonAction}`}
+            className="h-13 sm:h-14 w-full font-black tracking-wide active:scale-95 transition-[transform,box-shadow,background-color] duration-[250ms,250ms,200ms] ease-out clay-button-action"
           >
             <RotateCcw className="w-5 h-5" /> Try Again
           </Button>
@@ -65,20 +54,7 @@ export default function Quiz() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-3 sm:px-6 py-6 font-sans transition-colors duration-300 w-full">
-      <div
-        className={`
-          w-full
-          
-          max-w-full
-       
-          sm:max-w-xl
-        
-          lg:max-w-2xl
-          p-5 sm:p-8 lg:p-10
-          flex flex-col gap-5 sm:gap-6
-          ${clayCard}
-        `}
-      >
+      <div className="w-full max-w-full sm:max-w-xl lg:max-w-2xl p-5 sm:p-8 lg:p-10 flex flex-col gap-5 sm:gap-6 clay-card">
         <div className="flex justify-between items-center">
           <span className="text-[10px] sm:text-xs font-black text-gray-500 dark:text-gray-400 tracking-widest uppercase">
             Q {currentIndex + 1} / {questions.length}
@@ -134,7 +110,7 @@ export default function Quiz() {
                   "hover:scale-[1.01] active:scale-[0.99]",
                   // Comfortable minimum tap height on mobile
                   "min-h-[52px]",
-                  clayElement,
+                  "clay-element",
                   feedbackBorder,
                 ].join(" ")}
               >
@@ -155,7 +131,7 @@ export default function Quiz() {
           {isAnswerChecked ? (
             <Button
               onPress={nextQuestion}
-              className={`h-13 sm:h-14 w-full font-black tracking-wide active:scale-95 transition-[transform,box-shadow,background-color] duration-[250ms,250ms,200ms] ease-out ${clayButtonAction}`}
+              className="h-13 sm:h-14 w-full font-black tracking-wide active:scale-95 transition-[transform,box-shadow,background-color] duration-[250ms,250ms,200ms] ease-out clay-button-action"
             >
               Next Question <ChevronRight className="w-5 h-5" />
             </Button>
