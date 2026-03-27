@@ -26,7 +26,6 @@ export default function Quiz() {
     previousQuestion,
     toggleHint,
     restartQuiz,
-    setCurrentIndex,
     viewAnswers
   } = useQuizStore();
   const [correctAnswer, setShowCorrectAnswer] = useState(false);
