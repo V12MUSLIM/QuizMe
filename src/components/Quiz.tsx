@@ -6,7 +6,6 @@ import {
   CheckCircle,
   XCircle,
   ChevronLeft,
-  Eye,
 } from "lucide-react";
 
 import { Button } from "@heroui/react";
@@ -26,7 +25,6 @@ export default function Quiz() {
     previousQuestion,
     toggleHint,
     restartQuiz,
-  viewAnswers
   } = useQuizStore();
 
   const currentQ = questions[currentIndex];
@@ -114,7 +112,7 @@ export default function Quiz() {
                   "ease-out",
                   "hover:scale-[1.01] active:scale-[0.99]",
                   // Comfortable minimum tap height on mobile
-                  "min-h-[52px]",
+                  "min-h",
                   "clay-element",
                   feedbackBorder,
                 ].join(" ")}
