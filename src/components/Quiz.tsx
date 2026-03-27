@@ -10,6 +10,7 @@ import {
 
 import { Button } from "@heroui/react";
 import { ProgressBar } from "@heroui/react";
+import { useState } from "react";
 
 export default function Quiz() {
   const {
@@ -25,30 +26,51 @@ export default function Quiz() {
     previousQuestion,
     toggleHint,
     restartQuiz,
+    setCurrentIndex,
+    viewAnswers
   } = useQuizStore();
-
+  const [correctAnswer, setShowCorrectAnswer] = useState(false);
   const currentQ = questions[currentIndex];
   const ProgressBarValue = ((currentIndex + 1) / questions.length) * 100;
 
   if (isFinished) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-3 sm:px-4 transition-colors duration-300">
-        <div className="w-full max-w-sm sm:max-w-md p-8 sm:p-10 text-center flex flex-col items-center clay-card">
-          <CheckCircle className="w-16 h-16 sm:w-20 sm:h-20 text-green-500 mb-5 drop-shadow-md" />
-          <h2 className="text-3xl sm:text-4xl font-black text-gray-800 dark:text-white mb-2">
+      <div className="min-h-screen flex items-center justify-center w-full transition-colors duration-300">
+        <div className="w-full  sm:max-w-xl lg:max-w-3xl xl:max-w-4xl p-8 sm:p-10 lg:p-14 text-center flex flex-col items-center clay-card mx-4 sm:mx-6 lg:mx-8">
+          <CheckCircle className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-green-500 mb-5 drop-shadow-md" />
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-800 dark:text-white mb-2">
             Exam Complete!
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 font-semibold">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8 font-semibold">
             You scored {score} out of {questions.length}
           </p>
-          <div className="space-y-4">
-          <Button
-            onPress={restartQuiz}
-            className="h-13 sm:h-14 w-full font-black tracking-wide active:scale-95 transition-[transform,box-shadow,background-color] duration-[250ms,250ms,200ms] ease-out clay-button-action"
-          >
-            <RotateCcw className="w-5 h-5" /> Try Again
-          </Button>
-
+          <div className="space-y-4 w-full">
+            <Button
+              onPress={restartQuiz}
+              className="h-13 sm:h-14 lg:h-16 w-full font-black tracking-wide active:scale-95 transition-[transform,box-shadow,background-color] duration-[250ms,250ms,200ms] ease-out clay-button-action text-base lg:text-lg"
+            >
+              <RotateCcw className="w-5 h-5 lg:w-6 lg:h-6" /> Try Again
+            </Button>
+            <Button
+              onPress={() => setShowCorrectAnswer((prev) => !prev)}
+              className="h-13 sm:h-14 lg:h-16 w-full font-black tracking-wide active:scale-95 transition-[transform,box-shadow,background-color] duration-[250ms,250ms,200ms] ease-out clay-button-action text-base lg:text-lg"
+            >
+              See correct answers only
+            </Button>
+            {correctAnswer &&
+              questions.map((question, index) => (
+                <div
+                  key={index}
+                  className="clay-element p-4 sm:p-5 lg:p-6 text-left"
+                >
+                  <h1 className="text-lg lg:text-xl font-bold text-gray-800 dark:text-white mb-3">
+                    {question.question}
+                  </h1>
+                  <p className="clay-correct-answer">
+                    ✓ {question.correctAnswer}
+                  </p>
+                </div>
+              ))}
           </div>
         </div>
       </div>
@@ -171,6 +193,14 @@ export default function Quiz() {
             </Button>
           </div>
         </div>
+        <Button
+          variant="ghost"
+          className="underline"
+          onClick={viewAnswers}
+          fullWidth
+        >
+          See Correct answers only.
+        </Button>
       </div>
     </div>
   );

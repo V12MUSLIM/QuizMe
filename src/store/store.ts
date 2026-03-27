@@ -117,7 +117,7 @@ export const useQuizStore = create<QuizState>((set, get) => {
     },
     viewAnswers: () => {
       set({
-        isFinished: false,
+        isFinished: true,
       });
     },
     // This handles moving forward
