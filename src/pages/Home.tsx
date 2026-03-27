@@ -32,7 +32,7 @@ export default function Home() {
         <div className="w-full h-px bg-gray-300/50 dark:bg-gray-800/80 shadow-[0_1px_0_rgba(255,255,255,0.8)] dark:shadow-none"></div>
 
         {/* Divider */}
-        <div className="w-full h-px bg-gray-300/50 dark:bg-gray-800/80 shadow-[0_1px_0_rgba(255,255,255,0.8)] dark:shadow-none"></div>
+        
 
         {/* Action Button Row */}
         <div className="w-full flex gap-4 items-center mt-2">

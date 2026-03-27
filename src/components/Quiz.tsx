@@ -6,6 +6,7 @@ import {
   CheckCircle,
   XCircle,
   ChevronLeft,
+  Eye,
 } from "lucide-react";
 
 import { Button } from "@heroui/react";
@@ -25,6 +26,7 @@ export default function Quiz() {
     previousQuestion,
     toggleHint,
     restartQuiz,
+  viewAnswers
   } = useQuizStore();
 
   const currentQ = questions[currentIndex];
@@ -41,12 +43,15 @@ export default function Quiz() {
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 font-semibold">
             You scored {score} out of {questions.length}
           </p>
+          <div className="space-y-4">
           <Button
             onPress={restartQuiz}
             className="h-13 sm:h-14 w-full font-black tracking-wide active:scale-95 transition-[transform,box-shadow,background-color] duration-[250ms,250ms,200ms] ease-out clay-button-action"
           >
             <RotateCcw className="w-5 h-5" /> Try Again
           </Button>
+
+          </div>
         </div>
       </div>
     );
