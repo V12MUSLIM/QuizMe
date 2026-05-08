@@ -24,7 +24,7 @@ interface QuizState {
   toggleHint: () => void;
   restartQuiz: () => void;
   setCurrentIndex: (index: number) => void;
-   viewAnswers: () => void;
+  viewAnswers: () => void;
 }
 
 interface PersistedState {
