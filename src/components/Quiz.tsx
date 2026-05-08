@@ -29,7 +29,6 @@ export default function Quiz() {
     previousQuestion,
     toggleHint,
     restartQuiz,
-    viewAnswers,
   } = useQuizStore();
   const [showResults, setShowResults] = useState(false);
   const currentQ = questions[currentIndex];
