@@ -4,5 +4,6 @@ export interface Question{
     options:string[]
     correctAnswer: string,
     hint:string
+    wrongAnswerExplanation:string
 }
 

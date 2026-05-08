@@ -34,6 +34,8 @@ export default function Quiz() {
   const [showResults, setShowResults] = useState(false);
   const currentQ = questions[currentIndex];
   const ProgressBarValue = ((currentIndex + 1) / questions.length) * 100;
+  const showExplanation =
+    isAnswerChecked && selectedAnswer !== currentQ.correctAnswer;
   const navigate = useNavigate();
   const clayCard = "shadow-clay-card dark:shadow-clay-card-dark";
 
@@ -218,16 +220,25 @@ export default function Quiz() {
                 <ChevronRight className="w-5 h-5" />
               </Button>
             </div>
+            <div>
+              {showExplanation && (
+                <div className="clay-element p-6 bg-red-50 dark:bg-red-500/10 border-2 border-red-300 dark:border-red-500/40">
+                  <p className="text-base sm:text-lg font-semibold text-red-700 dark:text-red-300">
+                    {currentQ.wrongAnswerExplanation}
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
 
-          <Button
+          {/* <Button
             variant="ghost"
             className="underline"
             onClick={viewAnswers}
             fullWidth
           >
             See Results
-          </Button>
+          </Button> */}
         </div>
       ) : (
         <div

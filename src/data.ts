@@ -11,6 +11,8 @@ export const mockQuestions: Question[] = [
     ],
     correctAnswer: "To analyze raw data and draw conclusions",
     hint: "Think about how organizations gain insights from information.",
+    wrongAnswerExplanation:
+      "Data analytics focuses on extracting insights and conclusions from raw data to support better decision-making. It is not mainly about deleting data, building hardware, or replacing databases.",
   },
   {
     id: 2,
@@ -23,6 +25,8 @@ export const mockQuestions: Question[] = [
     ],
     correctAnswer: "Facts, observations, numbers, and information",
     hint: "Data can exist in many forms.",
+    wrongAnswerExplanation:
+      "Data includes many forms such as numbers, observations, facts, text, graphs, and measurements. Restricting data to only one type is incorrect.",
   },
   {
     id: 3,
@@ -36,6 +40,8 @@ export const mockQuestions: Question[] = [
     ],
     correctAnswer: "Data Mining",
     hint: "Think about the sequence shown in the processing pipeline.",
+    wrongAnswerExplanation:
+      "The data processing chain follows the order: Data → Database → Data Warehouse → Data Mining → Data Visualization. Therefore, Data Mining comes after Data Warehouse.",
   },
   {
     id: 4,
@@ -49,6 +55,8 @@ export const mockQuestions: Question[] = [
     ],
     correctAnswer: "Transform raw data into actionable insights",
     hint: "BI focuses on decision-making support.",
+    wrongAnswerExplanation:
+      "Business Intelligence systems analyze organizational data and convert it into useful insights that support strategic and operational decisions.",
   },
   {
     id: 5,
@@ -61,6 +69,8 @@ export const mockQuestions: Question[] = [
     ],
     correctAnswer: "Descriptive Analytics",
     hint: "It summarizes past events and trends.",
+    wrongAnswerExplanation:
+      "Descriptive analytics focuses on summarizing historical data and identifying trends, which directly answers the question 'What happened?'",
   },
   {
     id: 6,
@@ -70,10 +80,12 @@ export const mockQuestions: Question[] = [
       "Diagnostic Analytics",
       "Descriptive Analytics",
       "Predictive Analytics",
-      "Prescriptive Analytics",
+      "Operational Analytics",
     ],
     correctAnswer: "Diagnostic Analytics",
     hint: "It investigates causes and correlations.",
+    wrongAnswerExplanation:
+      "Diagnostic analytics analyzes causes, anomalies, and relationships to explain why an event occurred.",
   },
   {
     id: 7,
@@ -83,10 +95,12 @@ export const mockQuestions: Question[] = [
       "Diagnostic Analytics",
       "Descriptive Analytics",
       "Predictive Analytics",
-      "Operational Analytics",
+      "Data Cleaning",
     ],
     correctAnswer: "Predictive Analytics",
     hint: "Think about future trends and machine learning.",
+    wrongAnswerExplanation:
+      "Predictive analytics uses historical data, machine learning, and statistical models to forecast future trends and events.",
   },
   {
     id: 8,
@@ -99,6 +113,8 @@ export const mockQuestions: Question[] = [
     ],
     correctAnswer: "What should be done?",
     hint: "It recommends actions based on predictions.",
+    wrongAnswerExplanation:
+      "Prescriptive analytics goes beyond prediction and recommends actions or decisions that should be taken.",
   },
   {
     id: 9,
@@ -106,6 +122,8 @@ export const mockQuestions: Question[] = [
     options: ["Tableau", "Photoshop", "Visual Studio Code", "AutoCAD"],
     correctAnswer: "Tableau",
     hint: "It is widely used for dashboards and visualization.",
+    wrongAnswerExplanation:
+      "Tableau is a Business Intelligence and visualization platform used for dashboards, reporting, and data analysis.",
   },
   {
     id: 10,
@@ -114,90 +132,49 @@ export const mockQuestions: Question[] = [
     options: ["CRM", "ETL", "TDM", "OLAP"],
     correctAnswer: "ETL",
     hint: "This process prepares data for analysis.",
+    wrongAnswerExplanation:
+      "ETL stands for Extract, Transform, and Load, which is the standard process for preparing and integrating data into warehouses.",
   },
   {
     id: 11,
-    question:
-      "Which phase of the Data Analytics Lifecycle focuses on understanding the business problem?",
-    options: [
-      "Model Building",
-      "Discovery",
-      "Operationalize",
-      "Communicate Results",
-    ],
-    correctAnswer: "Discovery",
-    hint: "It is the first phase in the lifecycle.",
-  },
-  {
-    id: 12,
-    question: "What is the purpose of data visualization?",
-    options: [
-      "To make databases larger",
-      "To hide trends in data",
-      "To present insights clearly and effectively",
-      "To remove all raw data",
-    ],
-    correctAnswer: "To present insights clearly and effectively",
-    hint: "Visualization helps communicate conclusions.",
-  },
-  {
-    id: 13,
-    question: "Which of the following is an application of BI in healthcare?",
-    options: [
-      "Predicting machinery failure",
-      "Diagnosing diseases using patient data",
-      "Designing buildings",
-      "Creating social media profiles",
-    ],
-    correctAnswer: "Diagnosing diseases using patient data",
-    hint: "Healthcare analytics often supports diagnosis.",
-  },
-  {
-    id: 14,
-    question: "Which BI application is common in banking?",
-    options: [
-      "Movie recommendation",
-      "Automated loan approval",
-      "Weather forecasting only",
-      "Manufacturing robots",
-    ],
-    correctAnswer: "Automated loan approval",
-    hint: "Banks use historical financial data.",
-  },
-  {
-    id: 15,
     question: "What is a Data Warehouse mainly optimized for?",
     options: [
       "Gaming performance",
       "Transaction processing",
       "Reporting and analysis",
-      "Social networking",
+      "Graphic design",
     ],
     correctAnswer: "Reporting and analysis",
     hint: "A DW supports decision-making.",
+    wrongAnswerExplanation:
+      "A Data Warehouse is designed for reporting, querying, historical analysis, and business intelligence rather than daily transaction processing.",
   },
   {
-    id: 16,
+    id: 12,
     question:
       "Which characteristic means data in a warehouse is stored over long periods?",
-    options: ["Integrated", "Subject-oriented", "Time-variant", "Volatile"],
+    options: ["Integrated", "Time-variant", "Temporary", "Volatile"],
     correctAnswer: "Time-variant",
     hint: "Historical analysis requires time-based data.",
+    wrongAnswerExplanation:
+      "Time-variant means the warehouse stores historical data over different periods, enabling trend analysis and comparisons.",
   },
   {
-    id: 17,
+    id: 13,
     question: "What does the term 'Nonvolatile' mean in Data Warehousing?",
     options: [
       "Data changes every second",
       "Data is frequently deleted",
       "Data remains stable after loading",
-      "Data is never stored",
+      "Data is temporary",
     ],
     correctAnswer: "Data remains stable after loading",
     hint: "Warehouse data is not constantly updated like transactional systems.",
+    wrongAnswerExplanation:
+      "Nonvolatile data remains persistent and stable once loaded into the warehouse, unlike operational databases where updates happen frequently.",
   },
   {
-    id: 18,
+    id: 14,
     question:
       "Which schema design uses a central fact table connected to dimension tables?",
     options: [
@@ -208,128 +185,78 @@ export const mockQuestions: Question[] = [
     ],
     correctAnswer: "Star Schema",
     hint: "It minimizes joins for faster queries.",
+    wrongAnswerExplanation:
+      "The Star Schema contains a central fact table connected directly to dimension tables, simplifying queries and improving performance.",
   },
   {
-    id: 19,
+    id: 15,
     question: "Which schema reduces redundancy but increases query complexity?",
-    options: ["Star Schema", "Flat Schema", "Snowflake Schema", "Graph Schema"],
+    options: [
+      "Flat Schema",
+      "Star Schema",
+      "Snowflake Schema",
+      "Linear Schema",
+    ],
     correctAnswer: "Snowflake Schema",
     hint: "It normalizes dimension tables.",
+    wrongAnswerExplanation:
+      "The Snowflake Schema normalizes dimensions to reduce redundancy, but this increases the number of joins and query complexity.",
   },
   {
-    id: 20,
-    question:
-      "Which approach to building a data warehouse starts with small departmental data marts?",
-    options: [
-      "Top-Down Approach",
-      "Bottom-Up Approach",
-      "Centralized Approach",
-      "Hierarchical Approach",
-    ],
-    correctAnswer: "Bottom-Up Approach",
-    hint: "It begins with smaller functional systems.",
-  },
-  {
-    id: 21,
-    question:
-      "Which approach creates a centralized enterprise-wide data warehouse first?",
-    options: [
-      "Bottom-Up Approach",
-      "Distributed Approach",
-      "Top-Down Approach",
-      "Incremental Approach",
-    ],
-    correctAnswer: "Top-Down Approach",
-    hint: "It focuses on organization-wide integration.",
-  },
-  {
-    id: 22,
-    question:
-      "Which component of Data Warehouse architecture is responsible for cleaning and transforming data?",
-    options: [
-      "Data Sources",
-      "Data Access",
-      "ETL Processing",
-      "Reporting Dashboard",
-    ],
-    correctAnswer: "ETL Processing",
-    hint: "This stage standardizes and prepares data.",
-  },
-  {
-    id: 23,
-    question:
-      "Which of the following is an example of external data sources in a DW?",
-    options: ["ERP Systems", "CRM Systems", "Weather Data", "Employee Tables"],
-    correctAnswer: "Weather Data",
-    hint: "External sources come from outside the organization.",
-  },
-  {
-    id: 24,
+    id: 16,
     question: "What is the primary goal of text mining?",
     options: [
       "Encrypting files",
       "Extracting insights from textual data",
-      "Deleting duplicate documents",
+      "Deleting documents",
       "Creating databases",
     ],
     correctAnswer: "Extracting insights from textual data",
     hint: "Text mining discovers knowledge in text.",
+    wrongAnswerExplanation:
+      "Text mining analyzes textual information to identify patterns, sentiments, trends, and useful insights.",
   },
   {
-    id: 25,
-    question:
-      "Which domain commonly uses text mining for analyzing patient histories?",
-    options: ["Finance", "Marketing", "Medicine", "Manufacturing"],
-    correctAnswer: "Medicine",
-    hint: "Healthcare generates large textual records.",
-  },
-  {
-    id: 26,
-    question: "What is a 'bag of words' in text mining?",
-    options: [
-      "A database table",
-      "A collection of unrelated images",
-      "A representation of words used in text",
-      "A programming language",
-    ],
-    correctAnswer: "A representation of words used in text",
-    hint: "It focuses on terms and frequencies.",
-  },
-  {
-    id: 27,
+    id: 17,
     question: "What does TDM stand for in text mining?",
     options: [
-      "Term Data Management",
+      "Text Data Mining",
+      "Technical Data Mapping",
       "Term Document Matrix",
-      "Text Discovery Method",
-      "Technical Data Mining",
+      "Term Database Model",
     ],
     correctAnswer: "Term Document Matrix",
     hint: "It maps terms to documents numerically.",
+    wrongAnswerExplanation:
+      "A Term Document Matrix represents how frequently terms appear across multiple documents.",
   },
   {
-    id: 28,
+    id: 18,
     question: "What does a Term Document Matrix mainly store?",
     options: [
-      "Video metadata",
-      "Relationships between employees",
+      "Images and videos",
+      "Employee records",
       "Frequency of terms in documents",
-      "Database passwords",
+      "Passwords",
     ],
     correctAnswer: "Frequency of terms in documents",
     hint: "Think about word occurrences.",
+    wrongAnswerExplanation:
+      "A TDM converts text into numeric form by recording the occurrence frequency of terms within documents.",
   },
   {
-    id: 29,
+    id: 19,
     question: "Which text mining technique groups similar documents together?",
-    options: ["Clustering", "Encryption", "Normalization", "Sorting"],
+    options: ["Normalization", "Encryption", "Clustering", "Formatting"],
     correctAnswer: "Clustering",
     hint: "It forms groups based on similarity.",
+    wrongAnswerExplanation:
+      "Clustering organizes documents into groups according to shared patterns, words, or similarities.",
   },
   {
-    id: 30,
+    id: 20,
     question:
-      "Which analytics type would be most suitable for recommending the best marketing strategy?",
+      "Which analytics type would be most suitable for recommending the best business action?",
     options: [
       "Descriptive Analytics",
       "Diagnostic Analytics",
@@ -338,244 +265,7 @@ export const mockQuestions: Question[] = [
     ],
     correctAnswer: "Prescriptive Analytics",
     hint: "It suggests optimal actions.",
-  },
-  {
-    id: 31,
-    question: "Why are dashboards important in BI systems?",
-    options: [
-      "They permanently delete records",
-      "They provide interactive insights and summaries",
-      "They replace databases",
-      "They increase hardware costs",
-    ],
-    correctAnswer: "They provide interactive insights and summaries",
-    hint: "Managers use them for monitoring performance.",
-  },
-  {
-    id: 32,
-    question: "Which activity belongs to the Data Preparation phase?",
-    options: [
-      "Building hypotheses",
-      "Cleaning missing values",
-      "Deploying final reports",
-      "Defining KPIs only",
-    ],
-    correctAnswer: "Cleaning missing values",
-    hint: "Preparation improves data quality.",
-  },
-  {
-    id: 33,
-    question: "Which of the following best describes descriptive analytics?",
-    options: [
-      "Predicting future events",
-      "Explaining why events happened",
-      "Summarizing historical data",
-      "Suggesting optimal decisions",
-    ],
-    correctAnswer: "Summarizing historical data",
-    hint: "It focuses on past information.",
-  },
-  {
-    id: 34,
-    question:
-      "A company uses historical customer purchases to forecast future buying behavior. Which analytics type is this?",
-    options: ["Descriptive", "Diagnostic", "Predictive", "Prescriptive"],
-    correctAnswer: "Predictive",
-    hint: "Forecasting is the key clue.",
-  },
-  {
-    id: 35,
-    question:
-      "Which BI application helps telecom companies reduce customer loss?",
-    options: [
-      "Fraud prevention",
-      "Customer retention management",
-      "Medical diagnosis",
-      "Legal e-discovery",
-    ],
-    correctAnswer: "Customer retention management",
-    hint: "It focuses on keeping subscribers loyal.",
-  },
-  {
-    id: 36,
-    question: "Why is metadata documentation important in a Data Warehouse?",
-    options: [
-      "It stores passwords",
-      "It explains transformations and calculations",
-      "It removes all duplicate data",
-      "It replaces ETL processes",
-    ],
-    correctAnswer: "It explains transformations and calculations",
-    hint: "Metadata describes how data is handled.",
-  },
-  {
-    id: 37,
-    question:
-      "Which characteristic of a Data Warehouse ensures consistency from multiple data sources?",
-    options: ["Integrated", "Volatile", "Temporary", "Fragmented"],
-    correctAnswer: "Integrated",
-    hint: "It combines data into a unified view.",
-  },
-  {
-    id: 38,
-    question:
-      "What is one major advantage of the Bottom-Up data warehouse approach?",
-    options: [
-      "Unlimited scalability",
-      "Quick benefits for departments",
-      "No need for integration",
-      "Eliminates all transformation work",
-    ],
-    correctAnswer: "Quick benefits for departments",
-    hint: "Small data marts are easier to implement.",
-  },
-  {
-    id: 39,
-    question:
-      "Which technique in text mining identifies relationships between terms like 'sweet' and 'happy'?",
-    options: [
-      "Association Rule Analysis",
-      "Normalization",
-      "Indexing",
-      "Backup Recovery",
-    ],
-    correctAnswer: "Association Rule Analysis",
-    hint: "It discovers co-occurrence relationships.",
-  },
-  {
-    id: 40,
-    question: "Why is data conditioning important during preparation?",
-    options: [
-      "It increases data randomness",
-      "It reduces data quality",
-      "It improves consistency and usability",
-      "It deletes historical records",
-    ],
-    correctAnswer: "It improves consistency and usability",
-    hint: "Prepared data should be cleaner and reliable.",
-  },
-  {
-    id: 41,
-    question:
-      "A retailer analyzes seasonal purchasing trends to improve promotions. Which BI benefit does this demonstrate?",
-    options: [
-      "Improved decision-making",
-      "Hardware optimization",
-      "Database normalization",
-      "File encryption",
-    ],
-    correctAnswer: "Improved decision-making",
-    hint: "The insights directly guide business actions.",
-  },
-  {
-    id: 42,
-    question: "Which scenario best represents diagnostic analytics?",
-    options: [
-      "Forecasting stock prices next year",
-      "Summarizing yearly revenue",
-      "Investigating why sales suddenly dropped",
-      "Recommending the best supplier automatically",
-    ],
-    correctAnswer: "Investigating why sales suddenly dropped",
-    hint: "Diagnostic analytics explains causes.",
-  },
-  {
-    id: 43,
-    question:
-      "Why does the Star Schema generally provide faster query performance?",
-    options: [
-      "It removes all dimensions",
-      "It stores only images",
-      "It requires fewer joins",
-      "It avoids fact tables",
-    ],
-    correctAnswer: "It requires fewer joins",
-    hint: "Simpler relationships improve query speed.",
-  },
-  {
-    id: 44,
-    question:
-      "Which of the following is a challenge in identifying frequent words during text mining?",
-    options: [
-      "Too much structured data",
-      "Spelling variations and synonyms",
-      "Lack of documents",
-      "Having only numbers",
-    ],
-    correctAnswer: "Spelling variations and synonyms",
-    hint: "Different words may have similar meanings.",
-  },
-  {
-    id: 45,
-    question:
-      "What is the main reason organizations use predictive maintenance in manufacturing?",
-    options: [
-      "To redesign factories",
-      "To forecast machinery failures",
-      "To reduce employee salaries",
-      "To eliminate warehouses",
-    ],
-    correctAnswer: "To forecast machinery failures",
-    hint: "The goal is minimizing downtime.",
-  },
-  {
-    id: 46,
-    question:
-      "Which Data Analytics Lifecycle phase involves selecting analytical models such as clustering or classification?",
-    options: [
-      "Discovery",
-      "Data Preparation",
-      "Model Planning",
-      "Operationalize",
-    ],
-    correctAnswer: "Model Planning",
-    hint: "This phase decides suitable analytical methods.",
-  },
-  {
-    id: 47,
-    question:
-      "A healthcare system uses AI to recommend the best treatment for a patient. Which analytics type is primarily involved?",
-    options: ["Descriptive", "Diagnostic", "Predictive", "Prescriptive"],
-    correctAnswer: "Prescriptive",
-    hint: "The system suggests actions, not just predictions.",
-  },
-  {
-    id: 48,
-    question:
-      "Which statement best explains why Data Warehouses improve operational database performance?",
-    options: [
-      "They replace operational systems entirely",
-      "They reduce the analytical load on transactional systems",
-      "They remove historical data",
-      "They eliminate ETL processes",
-    ],
-    correctAnswer: "They reduce the analytical load on transactional systems",
-    hint: "Operational databases focus on daily transactions.",
-  },
-  {
-    id: 49,
-    question:
-      "In text mining, why is transforming text into numeric form important?",
-    options: [
-      "To make documents shorter",
-      "To allow data mining algorithms to process text",
-      "To remove all words",
-      "To encrypt sensitive information",
-    ],
-    correctAnswer: "To allow data mining algorithms to process text",
-    hint: "Algorithms typically require numerical input.",
-  },
-  {
-    id: 50,
-    question:
-      "A global company wants a single, enterprise-wide source of truth with centralized governance and standardized data. Which solution is most appropriate?",
-    options: [
-      "Independent spreadsheets for each department",
-      "Bottom-Up data marts only",
-      "Enterprise Data Warehouse (Top-Down)",
-      "Flat file systems",
-    ],
-    correctAnswer: "Enterprise Data Warehouse (Top-Down)",
-    hint: "The requirement emphasizes enterprise-wide integration and governance.",
+    wrongAnswerExplanation:
+      "Prescriptive analytics recommends the best decisions or actions by combining predictions, AI, and optimization techniques.",
   },
 ];
