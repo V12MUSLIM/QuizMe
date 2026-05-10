@@ -204,20 +204,29 @@ export default function Quiz() {
               </div>
             )}
 
-            <div className="mt-4 self-end flex gap-3">
+            <div className="mt-4 flex justify-between items-center">
               <Button
-                onClick={previousQuestion}
-                className="w-12 h-12 sm:w-14 sm:h-14 min-w-0 flex items-center justify-center rounded-2xl dark:shadow-clay-elem-dark"
-                isDisabled={currentIndex === 0}
+                onPress={restartQuiz}
+                variant="ghost"
+                className="text-red-500 hover:text-red-600 font-bold text-sm uppercase tracking-wider transition-colors duration-200"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <RotateCcw className="w-5 h-5" /> Reset
               </Button>
-              <Button
-                onClick={nextQuestion}
-                className="w-12 h-12 sm:w-14 sm:h-14 min-w-0 flex items-center justify-center rounded-2xl dark:shadow-clay-elem-dark"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </Button>
+              <div className="flex gap-3">
+                <Button
+                  onClick={previousQuestion}
+                  className="w-12 h-12 sm:w-14 sm:h-14 min-w-0 flex items-center justify-center rounded-2xl dark:shadow-clay-elem-dark"
+                  isDisabled={currentIndex === 0}
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </Button>
+                <Button
+                  onClick={nextQuestion}
+                  className="w-12 h-12 sm:w-14 sm:h-14 min-w-0 flex items-center justify-center rounded-2xl dark:shadow-clay-elem-dark"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </Button>
+              </div>
             </div>
             <div>
               {showExplanation && (
